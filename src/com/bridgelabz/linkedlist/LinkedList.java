@@ -77,7 +77,7 @@ public class LinkedList {
   public int pop() {
 		
 		if(head==null) {
-			System.out.println("List is emptys");
+			System.out.println("List is empty");
 		}
 		Node temp = head;
 		head = temp.next;
@@ -85,6 +85,21 @@ public class LinkedList {
 		return temp.key;
 	}
 
+  public int popLast() {
+		if(head==null) {
+			System.out.println("List is empty");
+		}
+		
+		Node temp = head;
+		
+		while(temp.next.next != null) {
+			temp=temp.next;
+		}
+		
+		int popLastKey=temp.next.key;
+		temp.next=null;
+		return popLastKey;
+	}
 	public void print() {
 		if(head==null) {
 			System.out.println("linkedList is empty");
