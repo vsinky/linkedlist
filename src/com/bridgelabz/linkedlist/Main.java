@@ -8,8 +8,9 @@ public class Main {
 		linkedList.append(30);
 		linkedList.append(70);
 		//linkedList.insertAtPosition(2,80);
-		linkedList.popLast();
+		//linkedList.popLast();
 		linkedList.search(30);
+		linkedList.insertNextToElement(30, 40);
 		linkedList.print();
 	}
 }
