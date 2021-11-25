@@ -9,6 +9,7 @@ public class Main {
 		linkedList.append(70);
 		//linkedList.insertAtPosition(2,80);
 		linkedList.popLast();
+		linkedList.search(30);
 		linkedList.print();
 	}
 }

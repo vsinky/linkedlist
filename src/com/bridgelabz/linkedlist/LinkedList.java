@@ -100,6 +100,27 @@ public class LinkedList {
 		temp.next=null;
 		return popLastKey;
 	}
+  
+  public boolean search(int elememt) {
+		
+		if(head == null) {
+			System.out.println("List is empty");
+			return false;
+		}
+		Node temp = head;
+		boolean isFound = false;
+		while(temp != null) {
+			
+			if(temp.key == elememt) {
+				isFound = true;
+				break;
+			}
+			temp = temp.next;
+		}
+		System.out.println(isFound);
+		return isFound;
+	}
+  
 	public void print() {
 		if(head==null) {
 			System.out.println("linkedList is empty");
