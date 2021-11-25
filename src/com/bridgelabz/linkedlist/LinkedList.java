@@ -54,6 +54,26 @@ public class LinkedList {
 		}
 		return isAdded;
 	}
+  
+  public void insertAtPosition(int position, int data) {
+		if(position<1) {
+			System.out.println("invalide position");
+		}
+		if(position==1) {
+			push(data);
+		}else {
+			Node newNode =new Node(data);
+			Node temp = head;
+			int count=1;
+			while(count<position-1) {
+				temp=temp.next;
+				count++;
+			}
+			Node current = temp.next;
+			temp.next = newNode;
+			newNode.next=current;
+		}
+	}
 
 	public void print() {
 		if(head==null) {
