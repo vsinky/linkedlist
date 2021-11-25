@@ -21,7 +21,7 @@ public class LinkedList {
 	  }else {
 		   Node temp = head;
 		   
-		   if(temp.next !=null) {
+		   while(temp.next !=null) {
 			   temp = temp.next;
 			   
 		   }
@@ -34,6 +34,25 @@ public class LinkedList {
 		Node newNode = new Node(data);
 		newNode.next = head;
 		head = newNode;
+	}
+  
+  public boolean append(int data) {
+		boolean isAdded = false;
+		
+		Node node = new Node(data);
+		if(head == null) {
+			head = node;
+			isAdded = true;
+		}
+		else {
+			Node temp = head;
+			while(temp.next != null) {
+				temp = temp.next;
+			}
+			temp.next = node;
+			isAdded = true;
+		}
+		return isAdded;
 	}
 
 	public void print() {
