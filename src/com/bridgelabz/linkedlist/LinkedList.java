@@ -21,7 +21,7 @@ public class LinkedList {
 	  }else {
 		   Node temp = head;
 		   
-		   while(temp.next !=null) {
+		   if(temp.next !=null) {
 			   temp = temp.next;
 			   
 		   }
@@ -30,18 +30,24 @@ public class LinkedList {
 	  }
 	  return isAdded;
   }
-public void print() {
-	Node temp = head;
-	if(head == null) {
-		
-	
-	System.out.println("List is empty: ");
-	}else {
-	while(temp !=null) {
-		System.out.print(temp.key+" -> ");
-		temp = temp.next;
+  public void push(int data) {
+		Node newNode = new Node(data);
+		newNode.next = head;
+		head = newNode;
+	}
+
+	public void print() {
+		if(head==null) {
+			System.out.println("linkedList is empty");
+		}else {
+			Node temp =head;
+			System.out.println("LinkedList is : ");
+			while(temp!=null) {
+				System.out.print(temp.key + "->");
+				temp=temp.next;
+			}
+		}
+		System.out.println();	
 }
-	System.out.println();	
 }
-}
-}
+
