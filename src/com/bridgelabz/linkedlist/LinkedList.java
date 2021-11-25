@@ -140,6 +140,32 @@ public class LinkedList {
 		}
 	}
   
+  public boolean remove(int element) {
+		if(!search(element)) {
+			System.out.println("Data not present");
+			return false;
+		}
+		Node temp = head;
+		Node prev = null;
+		if(temp != null && temp.key == element) {
+			head = temp.next;
+			return true;
+		}
+			
+		while(temp != null) {
+			if(temp.key == element ) {
+				prev.next = temp.next;
+				return true;
+			}
+			prev = temp;
+			temp = temp.next;
+		}
+		
+		return false;
+		
+	}
+  
+  
 	public void print() {
 		if(head==null) {
 			System.out.println("linkedList is empty");

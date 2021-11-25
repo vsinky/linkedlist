@@ -11,6 +11,7 @@ public class Main {
 		//linkedList.popLast();
 		linkedList.search(30);
 		linkedList.insertNextToElement(30, 40);
+		linkedList.remove(40);
 		linkedList.print();
 	}
 }
